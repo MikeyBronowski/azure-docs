@@ -100,8 +100,8 @@ Install-Module -Name Az.Synapse
 1. Get Web and Dev URL for Azure Synapse Workspace:
 
    ```azurepowershell-interactive
-   $WorkspaceWeb = (Get-AzSynapseWorkspace -Name $SynapseWorkspaceName -ResourceGroupName $StorageAccountResourceGroup).ConnectivityEndpoints.Web
-   $WorkspaceDev = (Get-AzSynapseWorkspace -Name $SynapseWorkspaceName -ResourceGroupName $StorageAccountResourceGroup).ConnectivityEndpoints.Dev
+   $WorkspaceWeb = (Get-AzSynapseWorkspace -Name $SynapseWorkspaceName -ResourceGroupName $StorageAccountResourceGroup).ConnectivityEndpoints.web
+   $WorkspaceDev = (Get-AzSynapseWorkspace -Name $SynapseWorkspaceName -ResourceGroupName $StorageAccountResourceGroup).ConnectivityEndpoints.dev
    ```
 
 1. Create a Firewall Rule to allow your access to Azure Synapse Workspace from your machine:
@@ -147,5 +147,4 @@ Remove-AzSynapseWorkspace -Name $SynapseWorkspaceNam -ResourceGroupName $Synapse
 ## Next steps
 
 Next, you can [create SQL pools](quickstart-create-sql-pool-studio.md) or
-[create Apache Spark pools](quickstart-create-apache-spark-pool-studio.md) to start analyzing and
-exploring your data.
+[create Apache Spark pools](quickstart-create-apache-spark-pool-studio.md) to start analyzing and exploring your data.
